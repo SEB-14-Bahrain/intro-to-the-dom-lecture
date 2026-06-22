@@ -11,6 +11,7 @@ const inputEl = document.querySelector('input')
 
 /*--------------- Event Listeners ----------------*/
 btnEl.addEventListener('click', function(event){
+    event.preventDefault()
    let pEl = document.createElement('p')
    pEl.textContent = inputEl.value
    containerEl.append(pEl)
@@ -18,7 +19,7 @@ btnEl.addEventListener('click', function(event){
 })
 
 containerEl.addEventListener('click', function(event){
-    event.target.style.textDecoration = 'line-through'
+    event.target.classList = 'done'
 })
 
 containerEl.addEventListener('dblclick', function(event){
