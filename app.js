@@ -1,4 +1,5 @@
 /*------------------ Constants -------------------*/
+const colorArr = ['lightblue', 'gold', 'red', 'green', 'plum', 'lime']
 
 /*------------------ Variables -------------------*/
 
@@ -7,7 +8,6 @@
 const btnEl = document.querySelector('button')
 const colorBtnEl = document.querySelector('#color-btn')
 
-
 /*--------------- Event Listeners ----------------*/
 
 btnEl.addEventListener('click', function(){
@@ -15,14 +15,11 @@ btnEl.addEventListener('click', function(){
 })
 
 colorBtnEl.addEventListener('click', function(){
-    // colorBtnEl.style.backgroundColor = 'orange'
-    if (colorBtnEl.style.backgroundColor === 'orange') {
-        colorBtnEl.style.backgroundColor = ''
-        console.log('we know it was already clicked')
-    } else {
-        colorBtnEl.style.backgroundColor = 'orange'
-        console.log('we need to make it orange')
-    }
+    let randomIndex = Math.floor(Math.random() * colorArr.length)
+    console.log(randomIndex)
+
+
+    colorBtnEl.style.backgroundColor = colorArr[randomIndex]
 
 
 })
