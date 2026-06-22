@@ -6,3 +6,11 @@ body {
     flex-direction: column;
 }
 
+.todo {
+    background-color: lime;
+}
+
+.done {
+    background-color: red;
+}
+
