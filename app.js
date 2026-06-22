@@ -1,27 +1,23 @@
 /*------------------ Constants -------------------*/
-const colorArr = ['lightblue', 'gold', 'red', 'green', 'plum', 'lime']
+// this creates a new element
+const pEl = document.createElement('p')
+
 
 /*------------------ Variables -------------------*/
 
 /*---------- Cached Element References -----------*/
+const todoEl = document.querySelector('.todo')
+const bodyEl = document.querySelector('body')
 
-const btnEl = document.querySelector('button')
-const colorBtnEl = document.querySelector('#color-btn')
+
 
 /*--------------- Event Listeners ----------------*/
 
-btnEl.addEventListener('click', function(){
-    console.log('the button was clicked')
-})
 
-colorBtnEl.addEventListener('click', function(){
-    let randomIndex = Math.floor(Math.random() * colorArr.length)
-    console.log(randomIndex)
-
-
-    colorBtnEl.style.backgroundColor = colorArr[randomIndex]
-
-
-})
 
 /*------------------ Functions -------------------*/
+
+
+pEl.textContent = 'This is my other p tag'
+bodyEl.append(pEl)
+// pEl.remove()
