@@ -1,31 +1,21 @@
 /*------------------ Constants -------------------*/
-// this creates a new element
-const pEl = document.createElement('p')
 
 
 /*------------------ Variables -------------------*/
 
-/*---------- Cached Element References -----------*/
-const todoEls = document.querySelectorAll('.todo')
-const bodyEl = document.querySelector('body')
 
+/*---------- Cached Element References -----------*/
+const btnEl = document.querySelector('button')
+const containerEl = document.querySelector('#container')
+const inputEl = document.querySelector('input')
 
 /*--------------- Event Listeners ----------------*/
-
-
+btnEl.addEventListener('click', function(){
+// console.log(inputEl.value)
+   let pEl = document.createElement('p')
+   pEl.textContent = inputEl.value
+   containerEl.append(pEl)
+   inputEl.value = ''
+})
 
 /*------------------ Functions -------------------*/
-
-pEl.textContent = 'This is my other p tag'
-// adds a class to pEl (the paragraph element)
-pEl.classList = 'todo'
-
-// removes the todo class from pEl
-// pEl.classList.remove('todo')
-
-bodyEl.append(pEl)
-// pEl.remove()
-
-todoEls.forEach(function(item){
-    item.classList = 'done'
-})
